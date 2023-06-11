@@ -8,7 +8,6 @@ export default function App() {
   const [selectedLocation, setSelectedLocation] = useState();
 
   function selectLocationHandler(event) {
-    console.log(event.nativeEvent.coordinate.latitude);
     const lat = event.nativeEvent.coordinate.latitude;
     const lng = event.nativeEvent.coordinate.longitude;
 
