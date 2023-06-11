@@ -24,24 +24,22 @@ export default function App() {
 
   return (
     <>
-      <Pressable onPress={selectLocationHandler}>
-        <MapView
-          style={styles.map}
-          initialRegion={region}
-          onPress={selectLocationHandler}
-        >
-          {selectedLocation && (
-            <Marker
-              title="Picked Location"
-              coordinate={{
-                latitude: selectedLocation.lat,
-                longitude: selectedLocation.lng,
-              }}
-              pinColor="red"
-            />
-          )}
-        </MapView>
-      </Pressable>
+      <MapView
+        style={styles.map}
+        initialRegion={region}
+        onPress={selectLocationHandler}
+      >
+        {selectedLocation && (
+          <Marker
+            title="Picked Location"
+            coordinate={{
+              latitude: selectedLocation.lat,
+              longitude: selectedLocation.lng,
+            }}
+            pinColor="red"
+          />
+        )}
+      </MapView>
       <StatusBar style="auto" />
     </>
   );
